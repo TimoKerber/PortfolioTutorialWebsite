@@ -1,0 +1,186 @@
+/* Styling for reusable elements */
+.btn {
+  color: #333;
+  font-size: 1.1rem;
+  background-color: #f4f4f4;
+  padding: 0.75rem 1rem; }
+  .btnPrimary {
+    transition: background-color 0.33s ease-in-out; }
+    .btnPrimary:hover {
+      background-color: #ffbc00; }
+
+.underline {
+  background-color: #ffbc00;
+  width: 50px;
+  height: 3px;
+  margin: auto; }
+
+.grid4x {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); }
+
+/* Mixins */
+body {
+  font-family: 'Dosis', sans-serif;
+  background-color: #fff;
+  line-height: 1.6; }
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+/* General Styling */
+a {
+  text-decoration: none;
+  color: #333; }
+
+img {
+  width: 100%; }
+
+ul {
+  list-style: none; }
+
+.contentContainer {
+  width: 1280px;
+  margin: auto; }
+
+h2 {
+  font-size: 4rem; }
+
+h3 {
+  font-size: 2rem; }
+
+h4 {
+  font-size: 1.25rem; }
+
+h2, h3, h4, h5, h6 {
+  text-transform: uppercase; }
+
+.clr {
+  clear: both; }
+
+/* Header Styling */
+.headerHome {
+  height: 100vh;
+  background: url("../project_resources/img/showcase.jpg") no-repeat center right/cover; }
+
+.headerOther {
+  height: 90px;
+  background: url("../project_resources/img/showcase.jpg") no-repeat center right/cover;
+  padding-top: 1rem;
+  border-bottom: 2px solid #ffbc00; }
+
+#header .navbar {
+  height: 90px; }
+  #header .navbar img {
+    width: 70px;
+    height: 70px; }
+  #header .navbar ul {
+    float: right; }
+    #header .navbar ul li {
+      display: inline-block;
+      padding: 1rem; }
+    #header .navbar ul a {
+      color: #f4f4f4;
+      font-size: 1.1rem;
+      text-transform: uppercase;
+      padding-bottom: 0.25rem;
+      border-bottom: 3px transparent solid;
+      transition: border-color 0.5s ease-in-out; }
+      #header .navbar ul a:hover {
+        border-color: #cccccc; }
+      #header .navbar ul a.current {
+        border-bottom: 3px solid #ffbc00; }
+
+#header .headerContent {
+  text-align: center;
+  color: #f4f4f4;
+  padding: 30vh 0; }
+  #header .headerContent h4 {
+    margin-bottom: 3rem; }
+
+/* Footer styling */
+footer {
+  background-color: #333;
+  color: #f4f4f4;
+  height: 90px; }
+  footer .copyright {
+    display: block;
+    float: left;
+    padding: 32.5px 0; }
+  footer .socials ul {
+    float: right;
+    padding: 25px 0; }
+    footer .socials ul li {
+      display: inline-block;
+      border: 2px solid;
+      border-color: #f4f4f4;
+      border-radius: 50%;
+      height: 40px;
+      width: 40px; }
+      footer .socials ul li i {
+        color: #f4f4f4;
+        padding: 10px 11px; }
+
+/* Main Section Styling
+        Header */
+.sectionHeadline {
+  text-align: center; }
+  .sectionHeadline * {
+    margin-bottom: 0.625rem; }
+  .sectionHeadline h3 {
+    margin-top: 0.625rem; }
+  .sectionHeadline p {
+    font-size: 1.25rem; }
+
+/* Main Section Styling
+      Content Boxes*/
+.box {
+  margin: 3rem 0;
+  text-align: center; }
+  .boxPrimary i {
+    color: #ffbc00; }
+  .boxMedium {
+    background-color: #cccccc;
+    font-size: 2rem;
+    padding: 2rem; }
+  .boxLight {
+    background-color: #f4f4f4;
+    font-size: 2rem;
+    padding: 2rem; }
+  .boxSecondary .icon {
+    margin: auto;
+    width: 140px;
+    height: 140px;
+    background-color: #333;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: all 0.8s ease-in-out; }
+    .boxSecondary .icon i {
+      color: #fff; }
+    .boxSecondary .icon:hover {
+      width: 150px;
+      height: 150px;
+      background-color: #ffbc00; }
+      .boxSecondary .icon:hover .iconCorner {
+        background-color: #333; }
+    .boxSecondary .icon .iconCorner {
+      position: absolute;
+      top: 0;
+      right: 0;
+      font-size: 28px;
+      height: 50px;
+      width: 50px;
+      background-color: #ffbc00;
+      border-radius: 50%;
+      transition: all 0.8s ease-in-out; }
+    .boxSecondary .icon p {
+      color: #f4f4f4;
+      font-size: 28px;
+      padding: 6px 0; }
+
+/* About Page Styling*/

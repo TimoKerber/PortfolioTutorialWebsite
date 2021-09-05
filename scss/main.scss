@@ -1,0 +1,262 @@
+@import 'variables';
+@import 'utilities';
+
+body {
+  font-family: 'Dosis', sans-serif;
+  background-color: #fff;
+  line-height: 1.6;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* General Styling */
+
+a {
+  text-decoration: none;
+  color: $darkColor;
+}
+
+img {
+  width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+.contentContainer {
+  width: $contentWidth;
+  margin: auto;
+}
+
+h2 {
+  font-size: 4rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+}
+
+h2, h3, h4, h5, h6 {
+  text-transform: uppercase;
+}
+
+.clr {
+  clear: both;
+}
+
+/* Header Styling */
+
+.headerHome {
+  height: 100vh;
+  background: url('../project_resources/img/showcase.jpg') no-repeat center right / cover;
+}
+
+.headerOther {
+  height: 90px;
+  background: url('../project_resources/img/showcase.jpg') no-repeat center right / cover;
+  padding-top: 1rem;
+  border-bottom: 2px solid $primaryColor;
+}
+
+#header {
+  .navbar {
+    height: 90px;
+    img {
+      width: 70px;
+      height: 70px;
+    }
+    ul {
+      float: right;
+      li {
+        display: inline-block;
+        padding: 1rem;
+      }
+      a {
+        color: $lightColor;
+        font-size: 1.1rem;
+        text-transform: uppercase;
+        padding-bottom: 0.25rem;
+        border-bottom: 3px transparent solid;
+        transition: border-color 0.5s ease-in-out;
+        
+        &:hover {
+        border-color: $mediumColor;
+        }
+        &.current {
+          border-bottom: 3px solid $primaryColor;
+        }
+      }
+    }
+  }
+
+  .headerContent {
+    text-align: center;
+    color: $lightColor;
+    padding: 30vh 0;
+
+    h4 {
+      margin-bottom: 3rem;
+    }
+  }
+}
+
+/* Footer styling */
+
+footer {
+  background-color: $darkColor;
+  color: $lightColor;
+  height: 90px;
+
+  .copyright {
+    display: block;
+    float: left;
+    padding: 32.5px 0;
+  }
+  .socials ul {
+    float: right;
+    padding: 25px 0;
+
+    li {
+      display: inline-block;
+      border: 2px solid;
+      border-color: $lightColor;
+      border-radius: 50%;
+      height: 40px;
+      width: 40px;
+      
+      i {
+        color: $lightColor;
+        padding: 10px 11px;
+      }
+    }
+  }
+}
+
+/* Main Section Styling
+        Header */
+
+.sectionHeadline {
+  text-align: center;
+
+  & * {
+    margin-bottom: 0.625rem;
+  }
+
+  h3 {
+    margin-top: 0.625rem;
+  }
+
+  p {
+    font-size: 1.25rem;
+  }
+}
+
+/* Main Section Styling
+      Content Boxes*/ 
+
+.box {
+
+  margin: 3rem 0;
+  text-align: center;
+  &Primary i {
+    color: $primaryColor;
+  }
+
+  &Medium {
+    background-color: $mediumColor;
+    font-size: 2rem;
+    padding: 2rem;
+  }
+
+  &Light {
+    background-color: $lightColor;
+    font-size: 2rem;
+    padding: 2rem;
+  }
+
+  &Secondary {
+
+    .icon {
+    margin: auto;
+    width: 140px;
+    height: 140px;
+    background-color: $darkColor;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: all 0.8s ease-in-out;
+    
+    i {
+      color: #fff;
+    }
+    &:hover {
+      width: 150px;
+      height: 150px;
+      background-color: $primaryColor;
+
+      .iconCorner {
+        background-color: $darkColor;
+      }
+    }
+    & .iconCorner {
+      position: absolute;
+      top: 0;
+      right: 0;
+      font-size: 28px;
+      height: 50px;
+      width: 50px;
+      background-color: $primaryColor;
+      border-radius: 50%;
+      transition: all 0.8s ease-in-out;
+      }
+
+      p {
+        color: $lightColor;
+        font-size: 28px;
+        padding: 6px 0;
+      }
+    }
+  }
+}
+
+/* About Page Styling*/
+
+.aboutMe {
+
+  &Headline {
+
+  }
+
+  &Content {
+
+  }
+
+  &Awards {
+
+  }
+
+  &TechnicalSkills {
+    &Bars {
+
+    }
+
+    &Icons {
+
+    }
+  }
+
+  &Testimonial {
+    
+  }
+}

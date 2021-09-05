@@ -1,0 +1,36 @@
+@import 'variables';
+
+/* Styling for reusable elements */
+
+.btn {
+  color: $darkColor;
+  font-size: 1.1rem;
+  background-color: $lightColor;
+  padding: 0.75rem 1rem;
+  &Primary {
+    transition: background-color 0.33s ease-in-out;
+    &:hover {
+      background-color: $primaryColor;
+    }
+  }
+}
+
+
+.underline {
+  background-color: $primaryColor;
+  width: 50px;
+  height: 3px;
+  margin: auto;
+}
+
+.grid4x {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* Mixins */
+
+@mixin grid4x {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
