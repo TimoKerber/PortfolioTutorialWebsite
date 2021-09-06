@@ -160,76 +160,6 @@ footer {
   }
 }
 
-/* Main Section Styling
-      Content Boxes*/ 
-
-.box {
-
-  margin: 3rem 0;
-  text-align: center;
-  &Primary i {
-    color: $primaryColor;
-  }
-
-  &Medium {
-    background-color: $mediumColor;
-    font-size: 2rem;
-    padding: 2rem;
-  }
-
-  &Light {
-    background-color: $lightColor;
-    font-size: 2rem;
-    padding: 2rem;
-  }
-
-  &Secondary {
-
-    .icon {
-    margin: auto;
-    width: 140px;
-    height: 140px;
-    background-color: $darkColor;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    transition: all 0.8s ease-in-out;
-    
-    i {
-      color: #fff;
-    }
-    &:hover {
-      width: 150px;
-      height: 150px;
-      background-color: $primaryColor;
-
-      .iconCorner {
-        background-color: $darkColor;
-      }
-    }
-    & .iconCorner {
-      position: absolute;
-      top: 0;
-      right: 0;
-      font-size: 28px;
-      height: 50px;
-      width: 50px;
-      background-color: $primaryColor;
-      border-radius: 50%;
-      transition: all 0.8s ease-in-out;
-      }
-
-      p {
-        color: $lightColor;
-        font-size: 28px;
-        padding: 6px 0;
-      }
-    }
-  }
-}
-
 /* About Page Styling*/
 
 .aboutMe {
@@ -239,24 +169,85 @@ footer {
   }
 
   &Content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
 
+    img {
+      margin: 3rem 0;
+    }
+    .boxLight {
+      margin-left: 2rem;
+      border-left: 2px solid $primaryColor;
+
+      p {
+        font-size: 1rem;
+        padding-top: 1rem;
+      }
+    }
   }
 
   &Awards {
-
+    @include grid3x;
   }
 
   &TechnicalSkills {
+    
     &Bars {
-
+      padding: 3rem 0;
+      background-color: $darkColor;
+      .Headline {
+        color: #fff;
+      }
+      .skillBar {
+        color: #fff;
+        margin: 1rem 0;
+        .outerBar {
+          width: 100%;
+          height: 25px;
+          background-color: $lightColor;
+          border-radius: 4px;
+          .innerBar {
+            background-color: $primaryColor;
+            border-radius: 4px 0 0 4px;
+            height: 100%;
+            &One {
+              width: 80%;
+            }
+            &Two {
+              width: 70%;
+            }
+            &Three {
+              width: 35%;
+            }
+            &Four {
+              width: 95%;
+            }
+            &Five {
+              width: 70%;
+            }
+            &Six {
+              width: 55%;
+            }
+          }
+        }
+      }
     }
 
     &Icons {
+      background-color: $lightColor;
+      
+      .contentContainer {
+        @include grid4x;
+      }
 
+      .iconBox {
+        margin: 2rem 0;
+        padding: 2rem;
+      }
     }
   }
 
   &Testimonial {
-    
+
   }
 }
