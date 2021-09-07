@@ -249,5 +249,8 @@ footer {
 
   &Testimonial {
 
+    .testimonialBoxes {
+      @include grid4x;
+    }
   }
 }
