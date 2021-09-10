@@ -1,0 +1,369 @@
+@import 'variables';
+@import 'utilities';
+
+body {
+  font-family: 'Dosis', sans-serif;
+  background-color: #fff;
+  line-height: 1.6;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* General Styling */
+
+a {
+  text-decoration: none;
+  color: $darkColor;
+}
+
+img {
+  width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+.contentContainer {
+  width: $contentWidth;
+  margin: auto;
+}
+
+h2 {
+  font-size: 4rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+}
+
+h2, h3, h4, h5, h6 {
+  text-transform: uppercase;
+}
+
+.clr {
+  clear: both;
+}
+
+/* Header Styling */
+
+.headerHome {
+  height: 100vh;
+  background: url('../project_resources/img/showcase.jpg') no-repeat center right / cover;
+}
+
+.headerOther {
+  height: 90px;
+  background: url('../project_resources/img/showcase.jpg') no-repeat center right / cover;
+  padding-top: 1rem;
+  border-bottom: 2px solid $primaryColor;
+}
+
+#header {
+  .navbar {
+    height: 90px;
+    img {
+      width: 70px;
+      height: 70px;
+    }
+    ul {
+      float: right;
+      li {
+        display: inline-block;
+        padding: 1rem;
+      }
+      a {
+        color: $lightColor;
+        font-size: 1.1rem;
+        text-transform: uppercase;
+        padding-bottom: 0.25rem;
+        border-bottom: 3px transparent solid;
+        transition: border-color 0.5s ease-in-out;
+        
+        &:hover {
+        border-color: $mediumColor;
+        }
+        &.current {
+          border-bottom: 3px solid $primaryColor;
+        }
+      }
+    }
+  }
+
+  .headerContent {
+    text-align: center;
+    color: $lightColor;
+    padding: 30vh 0;
+
+    h4 {
+      margin-bottom: 3rem;
+    }
+  }
+}
+
+/* Footer styling */
+
+footer {
+  background-color: $darkColor;
+  color: $lightColor;
+  height: 90px;
+
+  .copyright {
+    display: block;
+    float: left;
+    padding: 32.5px 0;
+  }
+  .socials ul {
+    float: right;
+    padding: 25px 0;
+
+    li {
+      display: inline-block;
+      border: 2px solid;
+      border-color: $lightColor;
+      border-radius: 50%;
+      height: 40px;
+      width: 40px;
+      
+      i {
+        color: $lightColor;
+        padding: 10px 11px;
+      }
+    }
+  }
+}
+
+/* Main Section Styling
+        Header */
+
+.sectionHeadline {
+  text-align: center;
+
+  & * {
+    margin-bottom: 0.625rem;
+  }
+
+  h3 {
+    margin-top: 0.625rem;
+  }
+
+  p {
+    font-size: 1.25rem;
+  }
+}
+
+/* About Page Styling*/
+
+.aboutMe {
+
+  &Content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+
+    img {
+      margin: 3rem 0;
+    }
+    .boxLight {
+      margin-left: 2rem;
+      border-left: 2px solid $primaryColor;
+
+      p {
+        font-size: 1rem;
+        padding-top: 1rem;
+      }
+    }
+  }
+
+  &Awards {
+    @include grid3x;
+  }
+
+  &TechnicalSkills {
+    
+    &Bars {
+      padding: 3rem 0;
+      background-color: $darkColor;
+      .Headline {
+        color: #fff;
+      }
+      .skillBar {
+        color: #fff;
+        margin: 1rem 0;
+        .outerBar {
+          width: 100%;
+          height: 25px;
+          background-color: $lightColor;
+          border-radius: 4px;
+          .innerBar {
+            background-color: $primaryColor;
+            border-radius: 4px 0 0 4px;
+            height: 100%;
+            &One {
+              width: 80%;
+            }
+            &Two {
+              width: 70%;
+            }
+            &Three {
+              width: 35%;
+            }
+            &Four {
+              width: 95%;
+            }
+            &Five {
+              width: 70%;
+            }
+            &Six {
+              width: 55%;
+            }
+          }
+        }
+      }
+    }
+
+    &Icons {
+      background-color: $lightColor;  
+      
+      .contentContainer {
+        @include grid4x;
+      }
+
+      .iconBox {
+        margin: 2rem 0;
+        padding: 2rem;
+      }
+    }
+  }
+
+  &Testimonial {
+
+    .testimonialBoxes {
+      @include grid4x;
+    }
+  }
+}
+
+/* Work page */
+
+.workGalleries {
+  margin-top: 3rem;
+  @include grid3x; 
+}
+
+.item {
+  position: relative;
+  overflow: hidden;
+  
+  &:hover &Img img {
+    transition: transform 0.4s;
+    transform: scale(1.2);
+  }
+  
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0.9;
+    background-color: $primaryColor;
+    transform: scale(2) translateX(-125%)
+    translateY(-125%) rotate(-28deg) ;
+    transition: transform 2s cubic-bezier(.2, 1, .3, 1);
+  }
+
+  &:hover:after {
+    transform: scale(2) translateX(0) translateY(0) rotate(-28deg) ;
+  }
+
+  .itemText {
+    text-align: center;
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    top: -50%;
+    transform: translate(-50%,-50%);
+    z-index: 1;
+    transition: top 1.4s;
+  }
+
+  &:hover &Text {
+    top: 50%;
+  }
+} 
+
+/* Contact Me page */
+
+
+.contactForm {
+
+  .inputs {
+    display: grid;
+    grid-template-areas:
+    'namee mail'
+    'subject phone'
+    'message message';
+    grid-gap: 0.5rem;
+  }
+
+  .message {
+    grid-area: message;
+    height: 6rem;
+  }
+  .name {
+    grid-area: namee;
+  }
+  .mail {
+    grid-area: mail;
+  }
+  .subject {
+    grid-area: subject;
+  }
+  .phone {
+    grid-area: phone;
+  }
+
+  input {
+    padding: 0.4rem;
+  }
+}
+
+.contactForm .btn {
+  width: 50%;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
+.contactAdditional1 {
+  background-color: $darkColor;
+  color: #fff;
+  
+  .contentContainer {
+    @include grid3x;
+
+    .box {
+      margin: 0;
+    }
+  }
+}
+
+.contactAdditional2 {
+  background-color: $primaryColor;
+  color: #fff;
+  text-align: center;
+  height: 19rem;
+  font-size: 4rem;
+  padding-top: 5rem;
+}
