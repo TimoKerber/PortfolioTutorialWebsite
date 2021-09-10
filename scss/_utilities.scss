@@ -7,7 +7,20 @@
   font-size: 1.1rem;
   background-color: $lightColor;
   padding: 0.75rem 1rem;
+  text-align: center;
+  display: inline-block;
+  cursor: pointer;
+
   &Primary {
+    transition: background-color 0.33s ease-in-out;
+    &:hover {
+      background-color: $primaryColor;
+    }
+  }
+
+  &Dark {
+    background-color: $darkColor;
+    color: $lightColor;
     transition: background-color 0.33s ease-in-out;
     &:hover {
       background-color: $primaryColor;
@@ -47,6 +60,12 @@
 
   &Light {
     background-color: $lightColor;
+    font-size: 2rem;
+    padding: 2rem;
+  }
+
+  &Dark {
+    background-color: $darkColor;
     font-size: 2rem;
     padding: 2rem;
   }
@@ -140,4 +159,9 @@
 @mixin grid3x {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+}
+
+@mixin grid2x {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }

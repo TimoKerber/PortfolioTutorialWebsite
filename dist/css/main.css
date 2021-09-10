@@ -3,10 +3,19 @@
   color: #333;
   font-size: 1.1rem;
   background-color: #f4f4f4;
-  padding: 0.75rem 1rem; }
+  padding: 0.75rem 1rem;
+  text-align: center;
+  display: inline-block;
+  cursor: pointer; }
   .btnPrimary {
     transition: background-color 0.33s ease-in-out; }
     .btnPrimary:hover {
+      background-color: #ffbc00; }
+  .btnDark {
+    background-color: #333;
+    color: #f4f4f4;
+    transition: background-color 0.33s ease-in-out; }
+    .btnDark:hover {
       background-color: #ffbc00; }
 
 .underline {
@@ -31,6 +40,10 @@
     padding: 2rem; }
   .boxLight {
     background-color: #f4f4f4;
+    font-size: 2rem;
+    padding: 2rem; }
+  .boxDark {
+    background-color: #333;
     font-size: 2rem;
     padding: 2rem; }
   .boxSecondary .icon {
@@ -262,3 +275,90 @@ footer {
 .aboutMeTestimonial .testimonialBoxes {
   display: grid;
   grid-template-columns: repeat(4, 1fr); }
+
+/* Work page */
+.workGalleries {
+  margin-top: 3rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); }
+
+.item {
+  position: relative;
+  overflow: hidden; }
+  .item:hover .itemImg img {
+    transition: transform 0.4s;
+    transform: scale(1.2); }
+  .item::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0.9;
+    background-color: #ffbc00;
+    transform: scale(2) translateX(-125%) translateY(-125%) rotate(-28deg);
+    transition: transform 2s cubic-bezier(0.2, 1, 0.3, 1); }
+  .item:hover:after {
+    transform: scale(2) translateX(0) translateY(0) rotate(-28deg); }
+  .item .itemText {
+    text-align: center;
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    top: -50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    transition: top 1.4s; }
+  .item:hover .itemText {
+    top: 50%; }
+
+/* Contact Me page */
+.contactForm .inputs {
+  display: grid;
+  grid-template-areas: 'namee mail' 'subject phone' 'message message';
+  grid-gap: 0.5rem; }
+
+.contactForm .message {
+  grid-area: message;
+  height: 6rem; }
+
+.contactForm .name {
+  grid-area: namee; }
+
+.contactForm .mail {
+  grid-area: mail; }
+
+.contactForm .subject {
+  grid-area: subject; }
+
+.contactForm .phone {
+  grid-area: phone; }
+
+.contactForm input {
+  padding: 0.4rem; }
+
+.contactForm .btn {
+  width: 50%;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  margin-top: 4rem;
+  margin-bottom: 4rem; }
+
+.contactAdditional1 {
+  background-color: #333;
+  color: #fff; }
+  .contactAdditional1 .contentContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); }
+    .contactAdditional1 .contentContainer .box {
+      margin: 0; }
+
+.contactAdditional2 {
+  background-color: #ffbc00;
+  color: #fff;
+  text-align: center;
+  height: 19rem;
+  font-size: 4rem;
+  padding-top: 5rem; }
